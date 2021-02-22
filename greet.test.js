@@ -5,6 +5,10 @@ describe('testGreet()', () => {
         const name = 'Elizabeth';
         expect(testGreet(name)).toBeCalled();
     });
+    it('should handle null', () => {
+        const name = '';
+        expect(testGreet(name)).toContain('Hello there!');
+    });
     it('should be shouted', () => {
         const name = 'Jose';
         expect(testGreet(name)).toBeCalled();
